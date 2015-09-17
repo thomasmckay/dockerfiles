@@ -1,0 +1,23 @@
+:ui:
+  :interactive: true
+  :per_page: 20
+  :history_file: './log/history'
+
+:watch_plain: true
+
+:log_dir: './log'
+:log_level: 'error'
+:log_api_calls: false
+:log_size: 5
+
+:request_timeout: 120
+
+:foreman:
+  :enable_module: true
+
+:katello:
+  :enable_module: true
+
+:csv:
+  :enable_module: true
+
