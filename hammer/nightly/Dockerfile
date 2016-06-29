@@ -1,8 +1,9 @@
 FROM centos:7
 
+MAINTAINER thomasmckay
+
 COPY hammer.repo /etc/yum.repos.d/hammer.repo
 RUN yum -y install foreman-release-scl
-RUN yum -y install http://cbs.centos.org/kojifiles/packages/centos-release-scl/1/1.el7.centos/noarch/centos-release-scl-1-1.el7.centos.noarch.rpm
 RUN yum clean all && yum repolist && yum update -y
 RUN yum -y install \
     foreman-release-scl \
@@ -26,4 +27,5 @@ RUN echo "  :enable_module: true" >> /etc/hammer/cli.modules.d/csv.yml
 
 RUN cd
 
-CMD hammer
+ENTRYPOINT ["hammer"]
+CMD ["--help"]
