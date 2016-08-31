@@ -1,6 +1,6 @@
 [katello]
 name=Katello Nightly
-baseurl=https://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/
+baseurl=https://fedorapeople.org/groups/katello/releases/yum/nightly/katello/el7/x86_64/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-katello
 enabled=1
 gpgcheck=0
