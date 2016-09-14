@@ -10,7 +10,7 @@ RUN yum -y install \
     tfm-rubygem-hammer_cli \
     tfm-rubygem-hammer_cli_katello
 
-RUN gem install --no-rdoc --no-ri fast_gettext --version '<1.2.0'
+RUN gem install --no-rdoc --no-ri fast_gettext --version 1.1.0
 
 # hammer-cli-csv
 RUN yum -y install git
