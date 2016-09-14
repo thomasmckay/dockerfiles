@@ -9,12 +9,13 @@ RUN yum -y install \
     foreman-release-scl \
     tfm-rubygem-hammer_cli \
     tfm-rubygem-hammer_cli_katello
-
-RUN gem install --no-rdoc --no-ri fast_gettext --version 1.1.0
-
+    
 # hammer-cli-csv
 RUN yum -y install git
 RUN yum -y install libstdc++-devel make gcc-c++ ruby-devel rubygems rubygem-bundler
+
+RUN gem install --no-rdoc --no-ri fast_gettext --version 1.1.0
+
 RUN gem install --no-rdoc --no-ri hammer_cli_katello
 
 RUN git clone https://github.com/Katello/hammer-cli-katello.git
